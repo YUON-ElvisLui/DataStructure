@@ -1,11 +1,11 @@
 public class LinkedList {
 
     public static void main(String []args) {
-        LinkedList diva = new LinkedList();
-        diva.addToHead("Katy Perry");
-        diva.addToHead("Katy Perry");
-        diva.addToHead("Katy Perry");
-        diva.printList();
+        LinkedList hi = new LinkedList();
+        hi.addToHead("KP");
+        hi.addToHead("KP");
+        hi.addToHead("KP");
+        hi.printList();
 
 
     }
