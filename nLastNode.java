@@ -10,22 +10,37 @@ public class nLastNode {
     }
 
     public static simpleNode nthLastNode(LinkedList list, int n) {
-        simpleNode node1 = list.head;
-        simpleNode node2 = list.head;
-        int counter = 0;
-        while (counter < n){
-            if (node1 == null){
-                return null;
+        Node current = null;
+        Node tailSeeker = list.head;
+        int count = 0;
+        while (tailSeeker != null) {
+            tailSeeker = tailSeeker.getNextNode();
+            if (count >= n) {
+                if (current == null) {
+                         current = list.head;
             }
-            node1 = node1.getNextNode();
-            counter++;
+        current = current.getNextNode();
         }
-        while (node1 != null){
-            node1 = node1.getNextNode();
-            node2 = node2.getNextNode();
+       count++;
         }
-        return node2;
-    }
+        return current;
+ }
+
+//         simpleNode node1 = list.head;
+//         simpleNode node2 = list.head;
+//         int counter = 0;
+//         while (counter < n){
+//             if (node1 == null){
+//                 return null;
+//             }
+//             node1 = node1.getNextNode();
+//             counter++;
+//         }
+//         while (node1 != null){
+//             node1 = node1.getNextNode();
+//             node2 = node2.getNextNode();
+//         }
+//         return node2;
 
     public static LinkedList createList() {
         LinkedList list = new LinkedList();
